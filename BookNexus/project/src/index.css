@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@400;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply font-body text-gray-800;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+  
+  h1 {
+    @apply text-3xl md:text-4xl font-bold leading-tight;
+  }
+  
+  h2 {
+    @apply text-2xl md:text-3xl font-bold leading-tight;
+  }
+  
+  h3 {
+    @apply text-xl md:text-2xl font-semibold leading-snug;
+  }
+  
+  body {
+    @apply antialiased bg-gray-50;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md transition-all duration-200 font-medium focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  .btn-primary {
+    @apply btn bg-primary-600 text-white hover:bg-primary-700 focus:ring-primary-500;
+  }
+  
+  .btn-secondary {
+    @apply btn bg-secondary-500 text-white hover:bg-secondary-600 focus:ring-secondary-400;
+  }
+  
+  .btn-accent {
+    @apply btn bg-accent-600 text-white hover:bg-accent-700 focus:ring-accent-500;
+  }
+  
+  .btn-outline {
+    @apply btn border border-gray-300 text-gray-700 hover:bg-gray-50 focus:ring-gray-500;
+  }
+  
+  .input {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow transition-shadow duration-200 hover:shadow-md;
+  }
+  
+  .book-card {
+    @apply card overflow-hidden transition-all duration-300 hover:-translate-y-1;
+  }
+  
+  .book-cover {
+    @apply relative overflow-hidden bg-gray-200 aspect-[2/3];
+  }
+  
+  .modal-overlay {
+    @apply fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm z-40 flex items-center justify-center;
+  }
+  
+  .modal-content {
+    @apply bg-white rounded-lg shadow-xl w-full max-w-md md:max-w-lg mx-4 animate-fade-in;
+  }
+}
